@@ -24,4 +24,15 @@ def alphaNum(c):
             (ord('0') <= ord(c) <= ord('9')))
 
 
-print(isPalindrome("A_man,_a_plan,_a_canal: Panama")) # True
+def isIntPalindrome(x: int) -> bool:
+    if x < 0:
+        return False
+    reverse = 0
+    x_copy = x #make a copy of the original number
+    while x > 0:
+        reverse = (reverse * 10) + (x % 10) #reverse the number
+        x //= 10 #remove the last digit of the number
+    return reverse == x_copy #compare the reversed number with the original number
+
+print("is \033[33mA_man,_a_plan,_a_canal: Panama\033[0m a palindrome: ", isPalindrome("A_man,_a_plan,_a_canal: Panama")) # True
+print("is \033[33m121\033[0m a palindrome: ",  isIntPalindrome(121)) # True
