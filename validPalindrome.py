@@ -1,5 +1,14 @@
 
 def isPalindrome(s: str) -> bool:
+    """
+    Check if a given string is a palindrome, ignoring non-alphanumeric characters and case.
+
+    Args:
+        s (str): string to check if it is a palindrome
+
+    Returns:
+        bool: True if the string is a palindrome, False otherwise
+    """
     # newStr = "" #this is the string that will have all the ignored characters removed
 
     # for c in s:
